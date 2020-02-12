@@ -3,16 +3,25 @@
 *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+  cursor: default;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
 section {
   min-height: 100vh;
+}
+
+.widthControl {
+  max-width: 1200px;
 }
 
 .homepage-img {
@@ -22,16 +31,126 @@ section {
   max-height: 100vh;
 }
 
-.mainNav {
+.imgOverlay {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navBlock {
+  position: fixed;
+  height: auto;
+}
+
+.navBlock .mainNav ul {
   list-style: none;
-  width: 5vw;
+  margin: 0;
+  padding: 0 0 0 10px;
 }
 
-.mainNav li {
-  font-size: 2rem;
-  padding: 20px 15px;
+.navBlock .mainNav ul li {
+  font-size: 1.5rem;
+  padding: 20px 20px;
 }
 
-.mainNav li i {
+.navBlock .mainNav ul li i {
   color: rgba(255, 255, 255, 0.8);
 }
+
+.navBlock .mainNav ul li:hover {
+  cursor: pointer;
+}
+
+.navBlock .mainNav ul li:hover i {
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0 0px #000000, 0 0 10px #da0080, 0 0 15px #da0080, 0 0 20px #da0080, 0 0 25px #da0080, 0 0 27px #da0080, 0 0 30px #da0080;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.mainTitle {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.mainTitle h1 {
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  font-size: 12rem;
+  -webkit-transform: scaleY(1.5);
+          transform: scaleY(1.5);
+}
+
+.mainTitle .flexBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.mainTitle .flexBlock .flexItem {
+  position: relative;
+  width: 50%;
+}
+
+.mainTitle .flexBlock .flexItem .heroButton {
+  margin-left: 15px;
+  padding: 0 50px;
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  font-size: 2rem;
+  color: #ffffff;
+  text-shadow: 0 0 0px #da0080, 0 0 2px #da0080, 0 0 5px #da0080, 0 0 7px #da0080, 0 0 10px #da0080;
+  border: solid 2px #da0080;
+  box-shadow: 0px 0px 10px #da0080;
+  -moz-box-shadow: 0px 0px 10px #da0080;
+  -webkit-box-shadow: 0px 0px 10px #da0080;
+  cursor: pointer;
+}
+
+.mainTitle .flexBlock .flexItem .heroButton:hover {
+  background-color: #da0080;
+  box-shadow: 0px 0px 30px #da0080;
+  -moz-box-shadow: 0px 0px 30px #da0080;
+  -webkit-box-shadow: 0px 0px 30px #da0080;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.mainTitle .flexBlock .flexItemText {
+  position: relative;
+  width: 50%;
+  transform: translate(30%, 0);
+  -webkit-transform: translate(30%, 0);
+  text-align: left;
+  padding-right: 50px;
+}
+
+.mainTitle .flexBlock .flexItemText h2 {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+
+.mainTitle .flexBlock .flexItemText p {
+  margin-top: 15px;
+  color: #ffffff;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+}
+/*# sourceMappingURL=style.css.map */
